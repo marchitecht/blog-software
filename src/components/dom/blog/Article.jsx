@@ -2,16 +2,18 @@
 
 import cls from './Article.module.scss'
 import clss from './Mobile.module.scss'
-import useWindowSize from '../../../src/hooks/use-windows-size'
-export default function Page() {
-  const size = useWindowSize()
+import useWindowSize from '@/utils/hooks/use-windows-size'
+import { useTranslations } from 'next-intl'
 
+export default function Article(data) {
+  const t = useTranslations('Article')
+  const size = useWindowSize()
   const MobileOnly = () => {
     if (size.width < 960) {
       return (
         <div className={clss['mobileOnly']}>
           <div className={clss['wrapper']}>
-            <p className={clss['textWrapper']}>Posted by:</p>
+            <p className={clss['textWrapper']}>{t('posted')}</p>
             <div className={clss['article-layout-authors']}>
               <div className={clss['article-layout-container']}>
                 <div className={clss['article-layout-authorBorder']}>
@@ -21,9 +23,9 @@ export default function Page() {
                     </span>
                     <div className={cls['stack-stack']}>
                       <a>
-                        <p className={cls['text_wrapper-name']}>Mark Musin</p>
+                        <p className={cls['text_wrapper-name']}>{t('name')}</p>
                       </a>
-                      <p className={cls['text_wrapper']}>Software engineer</p>
+                      <p className={cls['text_wrapper']}>{t('occupation')}</p>
                     </div>
                   </div>
                 </div>
@@ -44,7 +46,7 @@ export default function Page() {
           <div className={cls['article-layout_backButtonWrapper']}>
             <div className={cls['article-layout_backButton']}>
               <a className={`${cls['link_link']} ${cls['link_secondary']}`} href='/'>
-                ← Back to {/* */}Blog
+                {t('back')}
               </a>
             </div>
           </div>
@@ -61,13 +63,11 @@ export default function Page() {
             </div>
             <h1 className={cls['article-layout_title']}>
               <span className={cls['title']} style={{ display: 'inline-block', verticalAlign: 'top' }}>
-                Building an interactive WebGL experience in Next.js
+                {data.data.map((item) => item.title)}
               </span>
             </h1>
             <p className={cls['article-layout_subtitle']}>
-              <span className={cls['subtitle']}>
-                Bring your creativity to life with the web 3D graphic rendering API.
-              </span>
+              <span className={cls['subtitle']}>{data.data.map((item) => item.subtitle)}</span>
             </p>
           </div>
         </div>
@@ -79,26 +79,11 @@ export default function Page() {
             {/* ARTICLE */}
             <div className={cls['article-layout_articleWrapper']}>
               <div className={cls['post']}>
-                <p className={cls['post-content']}>
-                  WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the
-                  ability to create unique, delightful graphics, unlike anything a static image is capable of. By
-                  leveraging WebGL, we were able to take what would have been a static conference signup and turned it
-                  into{' '}
-                </p>
-                <p className={cls['post-content']}>
-                  WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the
-                  ability to create unique, delightful graphics, unlike anything a static image is capable of. By
-                  leveraging WebGL, we were able to take what would have been a static conference signup and turned it
-                  into{' '}
-                </p>
+                <p className={cls['post-content']}>{data.data.map((item) => item.postContent1)}</p>
+                <p className={cls['post-content']}>{data.data.map((item) => item.postContent2)}</p>
                 <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
                 <h2 className={cls['paragraph-header']}>The big idea</h2>
-                <p className={cls['post-content']}>
-                  WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the
-                  ability to create unique, delightful graphics, unlike anything a static image is capable of. By
-                  leveraging WebGL, we were able to take what would have been a static conference signup and turned it
-                  into{' '}
-                </p>
+                <p className={cls['post-content']}>{data.data.map((item) => item.postContent3)}</p>
               </div>
             </div>
 
@@ -106,16 +91,16 @@ export default function Page() {
             <div className={cls['desktopOnly']}>
               <div className={cls['article-layout_articleSidebar']}>
                 <div className={cls['stack']}>
-                  <p className={cls['text_wrapper']}>Posted by:</p>
+                  <p className={cls['text_wrapper']}>{t('posted')}</p>
                   <div className={cls['stack-item']}>
                     <span className={cls['avatar']}>
                       <img className={cls['image']} src='https://vercel.com/api/www/avatar?u=drcmda&s=72' alt='' />
                     </span>
                     <div className={cls['stack-stack']}>
                       <a>
-                        <p className={cls['text_wrapper-name']}>Mark Musin</p>
+                        <p className={cls['text_wrapper-name']}>{t('name')}</p>
                       </a>
-                      <p className={cls['text_wrapper']}>Software engineer</p>
+                      <p className={cls['text_wrapper']}>{t('occupation')}</p>
                     </div>
                   </div>
                 </div>
@@ -128,23 +113,11 @@ export default function Page() {
         <section className={clss['article-layout_article']}>
           <div className={clss['article-layout_articleWrapper']}>
             <div className={clss['post']}>
-              <p className={clss['post-content']}>
-                WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability
-                to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging
-                WebGL, we were able to take what would have been a static conference signup and turned it into{' '}
-              </p>
-              <p className={clss['post-content']}>
-                WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability
-                to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging
-                WebGL, we were able to take what would have been a static conference signup and turned it into{' '}
-              </p>
+              <p className={clss['post-content']}>{data.data.map((item) => item.postContent1)}</p>
+              <p className={clss['post-content']}>{data.data.map((item) => item.postContent2)}</p>
               <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
               <h2 className={clss['paragraph-header']}>The big idea</h2>
-              <p className={cls['post-content']}>
-                WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability
-                to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging
-                WebGL, we were able to take what would have been a static conference signup and turned it into{' '}
-              </p>
+              <p className={cls['post-content']}>{data.data.map((item) => item.postContent3)}</p>
             </div>
           </div>
         </section>

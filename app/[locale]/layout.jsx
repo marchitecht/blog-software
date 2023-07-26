@@ -1,18 +1,19 @@
 import { Layout } from '@/components/dom/Layout'
+import Navbar from '@/components/dom/Navbar/Navbar'
 import '@/global.css'
 import { createTranslator, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'ru' }]
-}
+// export function generateStaticParams() {
+//   return [{ locale: 'en' }, { locale: 'ru' }]
+// }
 
 // export const metadata = {
 //   title: 'Next.js + Three.js',
 //   description: 'A minimal starter for Nextjs + React-three-fiber and Threejs.',
 // }
 // type Props = {
-//   children: ReactNode 
+//   children: ReactNode
 //   params: { locale: string }
 // }
 async function getMessages(locale) {
@@ -23,8 +24,6 @@ async function getMessages(locale) {
   }
 }
 
-
-
 export async function generateMetadata({ params: { locale } }) {
   const messages = await getMessages(locale)
 
@@ -34,13 +33,12 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages })
 
   return {
+    heading: t('Index.heading'),
+    paragraph: t('Index.paragraph'),
+    contact: t('Index.contact'),
     title: t('Index.title'),
     description: t('Index.description'),
-    contact: t('Index.contact'),
-    dpName: t('Index.dpName'),
-    dpDescription: t('Index.dpDescription'),
-    naisName: t('Index.naisName'),
-    naisDescription: t('Index.naisDescription'),
+    
   }
 }
 
@@ -51,6 +49,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   } catch (error) {
     notFound()
   }
+  console.log(messages);
   return (
     <html lang={locale} className='antialiased'>
       {/*
@@ -60,6 +59,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
       <head />
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar/>
           <Layout>{children}</Layout>
         </NextIntlClientProvider>
         {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}

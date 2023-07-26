@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   * {
     box-sizing: border-box;
   }
@@ -16,9 +17,15 @@
     padding: 0;
     overflow: hidden;
   }
-  body{
-    /* @apply max-w-[90%]  mx-auto overflow-hidden; */
+  body {
+    /* @apply max-w-[90%]  mx-auto; */
     background-color: rgb(0, 0, 0);
+  
+  }
+  nav {
+    display: flex;
+    /* width: 100%; */
+    /* border-bottom: 1px solid var(rgb(255, 255, 255, 0.1)); */
     
   }
 }

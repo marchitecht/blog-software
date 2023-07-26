@@ -1,11 +1,22 @@
 {
   "Index": {
-    "title": "Building products and software expirience.",
-    "description": "I build products and software expirience. My passion is building products and software expirience.",
+    "heading": "Building products and software expirience.",
+    "paragraph": "I build products and software expirience. My passion is building products and software expirience.",
     "contact": "Contact me",
-    "dpName": "Digital passport",
-    "dpDescription": "Building up from scratch User Interface for construction and engineering company",
-    "naisName": "Corporate website",
-    "naisDescription": "I was building up the website for the industrial company. Used 3D models in Next.js."
+    "title": "Digital passport",
+    "description": "Building up from scratch User Interface for construction and engineering company"
+  },
+  "Navigation": {
+    "About": "ABOUT"
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unknown}}"
+  },
+  "Article":{
+    "title": "",
+    "name": "Marat Musin",
+    "occupation": "Software Engineer",
+    "posted": "Posted by:",
+    "back": "← Back to Blog"
   }
 }
