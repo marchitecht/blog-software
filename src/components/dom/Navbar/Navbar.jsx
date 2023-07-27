@@ -12,7 +12,6 @@ import Instagram from '../icons/Instagram'
 import { useTranslations } from 'next-intl'
 import LocaleSwitcher from './LocaleSwitcher'
 
-
 export default function Navbar() {
   const t = useTranslations('Navigation')
   return (
@@ -24,7 +23,9 @@ export default function Navbar() {
       </div>
       <div className={cls['nav-mobile-section']}>
         <div className={`${cls['nav-section']} ${cls['nav-link-section']} `}>
-          <a href='#'>{t('About')}</a>
+          {/* <div className={cls[ 'button']}> */}
+          <a href=''>{t('About')}</a>
+          {/* </div> */}
           {/* <a href='#'>BLOG</a> */}
         </div>
         <div className={`${cls['nav-language-section']} ${cls['nav-section']} `}>

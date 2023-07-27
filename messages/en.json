@@ -10,9 +10,9 @@
     "About": "ABOUT"
   },
   "LocaleSwitcher": {
-    "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unknown}}"
+    "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unbekannt}}"
   },
-  "Article":{
+  "Article": {
     "title": "",
     "name": "Marat Musin",
     "occupation": "Software Engineer",

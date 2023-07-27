@@ -10,7 +10,7 @@
     "About": "РЕЗЮМЕ"
   },
   "LocaleSwitcher": {
-    "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unknown}}"
+    "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unbekannt}}"
   },
   "Article": {
     "title": "",
@@ -18,7 +18,5 @@
     "occupation": "Программист",
     "posted": "Опубликовано:",
     "back": "← Назад на главную"
-
-
   }
 }
