@@ -10,13 +10,15 @@
     "About": "РЕЗЮМЕ"
   },
   "LocaleSwitcher": {
-    "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unbekannt}}"
+    "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unknown}}"
   },
   "Article": {
     "title": "",
     "name": "Марат Мусин",
     "occupation": "Программист",
     "posted": "Опубликовано:",
-    "back": "← Назад на главную"
+    "back": "← Назад на Главную"
+
+
   }
 }
