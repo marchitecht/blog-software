@@ -3,6 +3,7 @@ export const dataBlog = [
     id: 1,
     path: 'dp',
     date: 'Friday October 21st 2022',
+    badge: 'Engineering',
     imageUrl: '/svg/DpLogo.svg',
     bgColor: 'bg-gradient-to-r from-red-900 from-10% via-black-900 via-80%',
 

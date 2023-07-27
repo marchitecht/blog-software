@@ -49,7 +49,6 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   } catch (error) {
     notFound()
   }
-  console.log(messages);
   return (
     <html lang={locale} className='antialiased'>
       {/*

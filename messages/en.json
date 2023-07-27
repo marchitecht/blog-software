@@ -12,11 +12,16 @@
   "LocaleSwitcher": {
     "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unknown}}"
   },
-  "Article":{
+  "Article": {
     "title": "",
     "name": "Marat Musin",
     "occupation": "Software Engineer",
     "posted": "Posted by:",
     "back": "← Back to Blog"
+  },
+  "dp": {
+    "title": "Building an interactive WebGL experience in Next.js",
+    "date": "Friday October 21st 2022",
+    "badge": "Engineering"
   }
 }

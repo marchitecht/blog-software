@@ -14,7 +14,7 @@ export default function Page({ params }) {
   const data = dataBlog.filter((item) => item.path === slug)
   return (
     <>
-      <Article data={data} />
+      <Article data={data} path={slug}/>
     </>
   )
 }
