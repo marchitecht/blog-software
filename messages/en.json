@@ -12,6 +12,14 @@
   "LocaleSwitcher": {
     "locale": "{locale, select, ru {🇷🇺} en {🇺🇸} other {Unknown}}"
   },
+  "About": {
+    "back": "← Back to Blog",
+    "badge": "CV and skills",
+    "date": "Friday October 21st 2022",
+    "title": "About me",
+    "subtitle": "Hello! I’m Marat, a software developer. I’m passionate developer and I work on technologies that empower regular people to explore web. And I have a lovely cat. 😺"
+
+  },
   "Article": {
     "title": "",
     "name": "Marat Musin",
@@ -22,6 +30,15 @@
   "dp": {
     "title": "Building an interactive WebGL experience in Next.js",
     "date": "Friday October 21st 2022",
-    "badge": "Engineering"
+    "badge": "Engineering",
+    "subtitle": "More interactivity with the web 3D graphic rendering API.",
+    "postContent1": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
+    "postContent2": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
+    "heading2": "Big idea",
+    "postContent3": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
+    "postContent4": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
+    "heading3": "Animations with 3D model",
+    "postContent5": "Для этого я использовал three.js и другие библиотеки React для работы с 3D. Оптимизация 3D моделей оказалась отдельной важной задачей, где мы сталкивались с различными аспектами, такими как количество полигонов и масштабирование текстур.",
+    "postContent6": "Одной из ключевых особенностей этого приложения - показ работы тензодатчиков на 3D модели. Если датчик находится в нормальном состоянии, он подсвечивается зеленым, если же есть проблемы, то подсвечивается красным."
   }
 }

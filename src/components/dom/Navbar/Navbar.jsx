@@ -18,13 +18,13 @@ export default function Navbar() {
   return (
     <nav className={cls['container']}>
       <div className={`${cls['nav-section']} ${cls['nav-logo-section']} `}>
-        <a href='#'>
+        <a href='/'>
           <img src='/svg/NaisLogo.svg' alt='' />
         </a>
       </div>
       <div className={cls['nav-mobile-section']}>
         <div className={`${cls['nav-section']} ${cls['nav-link-section']} `}>
-          <a href='#'>{t('About')}</a>
+          <a href='/about'>{t('About')}</a>
           {/* <a href='#'>BLOG</a> */}
         </div>
         <div className={`${cls['nav-language-section']} ${cls['nav-section']} `}>

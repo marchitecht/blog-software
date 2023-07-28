@@ -6,7 +6,6 @@ import useWindowSize from '@/utils/hooks/use-windows-size'
 import { useTranslations } from 'next-intl'
 
 export default function Article({ data, path }) {
-
   const t = useTranslations('Article')
 
   const tLocal = useTranslations(path)
@@ -68,12 +67,14 @@ export default function Article({ data, path }) {
             </div>
             <h1 className={cls['article-layout_title']}>
               <span className={cls['title']} style={{ display: 'inline-block', verticalAlign: 'top' }}>
-                {/* {data.data.map((item) => item.title)} */}
                 {tLocal('title')}
               </span>
             </h1>
             <p className={cls['article-layout_subtitle']}>
-              {/* <span className={cls['subtitle']}>{data.data.map((item) => item.subtitle)}</span> */}
+              <span className={cls['subtitle']}>
+                {tLocal('subtitle')}
+
+              </span>
             </p>
           </div>
         </div>
@@ -85,11 +86,19 @@ export default function Article({ data, path }) {
             {/* ARTICLE */}
             <div className={cls['article-layout_articleWrapper']}>
               <div className={cls['post']}>
-                {/* <p className={cls['post-content']}>{data.data.map((item) => item.postContent1)}</p> */}
-                {/* <p className={cls['post-content']}>{data.data.map((item) => item.postContent2)}</p> */}
+                <p className={cls['post-content']}>{tLocal('postContent1')}</p>
+                <p className={cls['post-content']}>{tLocal('postContent2')}</p>
                 <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
-                <h2 className={cls['paragraph-header']}>The big idea</h2>
-                {/* <p className={cls['post-content']}>{data.data.map((item) => item.postContent3)}</p> */}
+                <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
+                <p className={cls['post-content']}>{tLocal('postContent3')}</p>
+                <p className={cls['post-content']}>{tLocal('postContent4')}</p>
+                <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
+                <p className={cls['post-content']}>{tLocal('postContent5')}</p>
+                <p className={cls['post-content']}>{tLocal('postContent6')}</p>
+
+
+
+
               </div>
             </div>
 
@@ -119,11 +128,16 @@ export default function Article({ data, path }) {
         <section className={clss['article-layout_article']}>
           <div className={clss['article-layout_articleWrapper']}>
             <div className={clss['post']}>
-              {/* <p className={clss['post-content']}>{data.data.map((item) => item.postContent1)}</p> */}
-              {/* <p className={clss['post-content']}>{data.data.map((item) => item.postContent2)}</p> */}
+              <p className={clss['post-content']}>{tLocal('postContent1')}</p>
+              <p className={clss['post-content']}>{tLocal('postContent2')}</p>
               <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
-              <h2 className={clss['paragraph-header']}>The big idea</h2>
-              {/* <p className={cls['post-content']}>{data.data.map((item) => item.postContent3)}</p> */}
+              <h2 className={clss['paragraph-header']}>{tLocal('heading2')}</h2>
+                <p className={clss['post-content']}>{tLocal('postContent3')}</p> 
+                <p className={clss['post-content']}>{tLocal('postContent4')}</p>
+                <h2 className={clss['paragraph-header']}>{tLocal('heading3')}</h2>
+                <p className={clss['post-content']}>{tLocal('postContent5')}</p>  
+                <p className={clss['post-content']}>{tLocal('postContent6')}</p>          
+        
             </div>
           </div>
         </section>
