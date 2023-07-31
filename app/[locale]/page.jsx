@@ -58,7 +58,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className='w-full text-center flex w-full h-full flex-col items-start justify-center p-2 text-center rounded-3xl bg-gradient-to-r from-indigo-700 from-10% via-sky-900 via-50% animate-pulse drop-shadow-[0_0_50px_rgb(0,114,255)]'>
+        <div className='w-full text-center flex w-full  flex-col items-start justify-center p-2 text-center rounded-3xl bg-gradient-to-r from-indigo-700 from-10% via-sky-900 via-50% animate-pulse drop-shadow-[0_0_50px_rgb(0,114,255)]'>
           <View className='flex h-96 w-full flex-col items-center justify-center '>
             <Suspense fallback={null}>
               <Logo scale={0.5} position={[0, 0, 0]} />

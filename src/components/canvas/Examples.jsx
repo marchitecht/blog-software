@@ -23,7 +23,7 @@ export const Blob = ({ route = '/', ...props }) => {
   )
 }
 
-export const Logo = ({ route = '/blob', ...props }) => {
+export const Logo = ({ route = '/about', ...props }) => {
   const mesh = useRef(null)
   const router = useRouter()
 
