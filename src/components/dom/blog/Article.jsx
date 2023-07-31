@@ -92,10 +92,13 @@ export default function Article({ data, path }) {
                     <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
                     <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
                     <p className={cls['post-content']}>{tLocal('postContent3')}</p>
-                    <img
+                    <video
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
-                      src='https://media.giphy.com/media/Bs7lKLBKz7po6uMxUj/giphy.gif'
+                      src='/dp.mp4'
                       alt=''
+                      loop
+                      autoPlay
+                      muted
                     />
                     <p className={cls['post-content']}>{tLocal('postContent4')}</p>
                     <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
