@@ -44,7 +44,7 @@ export default function Page() {
             <button className='bg-green-500 px-4 py-2 rounded-3xl text-black  w-30 lg:w-auto'>
               <a href='mailto:martin.musinn@gmail.com'>{t('contact')}</a>
             </button>
-            <div className='flex items-center gap-4'>
+            {/* <div className='flex items-center gap-4'>
               <SocialButton bgColor='twitter'>
                 <Twitter />
               </SocialButton>
@@ -54,7 +54,7 @@ export default function Page() {
               <SocialButton bgColor='instagram'>
                 <Instagram />
               </SocialButton>
-            </div>
+            </div> */}
           </div>
         </div>
 

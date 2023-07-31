@@ -144,11 +144,16 @@ export default function Article({ data, path }) {
           <div className={clss['article-layout_articleWrapper']}>
             <div className={clss['post']}>
               {path === 'dp' && (
-                <div className='p-2 mb-8'>
+                <div className='p-2 mb-24'>
                   <p className={cls['post-content']}>{tLocal('postContent1')}</p>
                   <p className={cls['post-content']}>{tLocal('postContent2')}</p>
                   <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
                   <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
+                  <video
+                    className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-4 mb-4'
+                    src='https://media.giphy.com/media/Bs7lKLBKz7po6uMxUj/giphy.gif'
+                    alt=''
+                  />
                   <p className={cls['post-content']}>{tLocal('postContent3')}</p>
                   <p className={cls['post-content']}>{tLocal('postContent4')}</p>
                   <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
@@ -165,11 +170,7 @@ export default function Article({ data, path }) {
                   <SyntaxHighlighter language='javascript' style={nightOwl}>
                     {data.codestring3}
                   </SyntaxHighlighter>
-                  <video
-                    className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700'
-                    src='https://media.giphy.com/media/Bs7lKLBKz7po6uMxUj/giphy.gif'
-                    alt=''
-                  />
+                 
                 </div>
               )}
             </div>

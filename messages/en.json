@@ -32,13 +32,15 @@
     "date": "Friday October 21st 2022",
     "badge": "Engineering",
     "subtitle": "More interactivity with the web 3D graphic rendering API.",
-    "postContent1": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
-    "postContent2": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
+    "postContent1": "The project I worked on is related to a factory that manufactures fully integrated weighbridge systems. The most fascinating aspect of interacting with the client is understanding what they want to see in the end product. One of the main features of the application is 24/7 weight monitoring through a mobile app.",
+    "postContent2": "We have created a unique environment that enables customers to identify when and where malfunctions occur in the weighing system. To achieve this, we developed 24 functions logically grouped into three categories for easy navigation.",
     "heading2": "Big idea",
-    "postContent3": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
-    "postContent4": "WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into",
+    "postContent3": "One of the interesting implementations in the project is a 3D visualization model. Initially, the client provided a weighbridge model in .usdz format for viewing in augmented reality. We came up with the idea of transferring this model to a web platform, adding various functions and animations to it.",
+    "postContent4": "To achieve this, I used three.js and other React libraries for 3D work. Optimizing the 3D models proved to be a separate crucial task, where we dealt with various aspects such as polygon count and texture scaling.",
     "heading3": "Animations with 3D model",
-    "postContent5": "Для этого я использовал three.js и другие библиотеки React для работы с 3D. Оптимизация 3D моделей оказалась отдельной важной задачей, где мы сталкивались с различными аспектами, такими как количество полигонов и масштабирование текстур.",
-    "postContent6": "Одной из ключевых особенностей этого приложения - показ работы тензодатчиков на 3D модели. Если датчик находится в нормальном состоянии, он подсвечивается зеленым, если же есть проблемы, то подсвечивается красным."
+    "postContent5": "To achieve this, I used three.js and other React libraries for 3D work. Optimizing the 3D models proved to be a separate crucial task, where we dealt with various aspects such as polygon count and texture scaling.",
+    "postContent6": "One of the key features of this application is displaying the operation of load cells on the 3D model. If a load cell is in a normal state, it is highlighted in green, but if there are issues, it is highlighted in red.",
+    "postContent7": "Afterward, a new task emerged: to make the model and specific load cells visually accessible to the client. Instead of complicating things and using libraries like Theatre.js, I decided to write everything in useEffect, and it worked :)",
+    "postContent8": "First, I check which device my client is using. Here is the current state:"
   }
 }
