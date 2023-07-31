@@ -41,7 +41,9 @@ export default function Page() {
           <h1 className='text-4xl font-bold text-white'>{t('heading')}</h1>
           <p className='flex-1 text-white  mt-14'>{t('paragraph')}</p>
           <div className='flex flex-row mt-28 gap-4 lg:flex-row justify-self-end '>
-            <button className='bg-green-500 px-4 py-2 rounded-3xl text-black  w-30 lg:w-auto'>{t('contact')}</button>
+            <button className='bg-green-500 px-4 py-2 rounded-3xl text-black  w-30 lg:w-auto'>
+              <a href='mailto:martin.musinn@gmail.com'>{t('contact')}</a>
+            </button>
             <div className='flex items-center gap-4'>
               <SocialButton bgColor='twitter'>
                 <Twitter />
@@ -65,11 +67,10 @@ export default function Page() {
           </View>
         </div>
       </section>
-  
 
       <section className='grid grid-cols-1 lg:grid-cols-3 gap-3 max-w-[90%] mx-auto '>
         {/* first row */}
-        {dataBlog.map((item) => (
+        {Object.values(dataBlog).map((item) => (
           <ProjectPreview
             name={t('title')}
             description={t('description')}
@@ -79,7 +80,6 @@ export default function Page() {
             link={`/blog/${item.path}`}
           />
         ))}
-
       </section>
     </>
   )

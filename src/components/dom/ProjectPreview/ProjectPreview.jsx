@@ -10,7 +10,7 @@ const ProjectPreview = ({
 }) => {
   return (
     <Link href={link}>
-      <div className={`h-[20rem] rounded-3xl overflow-hidden ${bgColor}`}>
+      <div className={`h-[20rem] rounded-3xl overflow-hidden ${bgColor} mb-24`}>
         <div
           className='h-full w-full px-10 py-12  bg-center bg-no-repeat duration-[600ms] transition-all ease-in-out hover:scale-95 '
           style={{ backgroundImage: `url(${imageUrl})` }}

@@ -1,5 +1,6 @@
 import { Layout } from '@/components/dom/Layout'
 import Navbar from '@/components/dom/Navbar/Navbar'
+import Navbar1 from '@/components/dom/Navbar/Navbar1'
 import '@/global.css'
 import { createTranslator, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'

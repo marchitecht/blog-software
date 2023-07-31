@@ -4,13 +4,15 @@ import cls from './Article.module.scss'
 import clss from './Mobile.module.scss'
 import useWindowSize from '@/utils/hooks/use-windows-size'
 import { useTranslations } from 'next-intl'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Article({ data, path }) {
   const t = useTranslations('Article')
 
   const tLocal = useTranslations(path)
-
   const size = useWindowSize()
+
   const MobileOnly = () => {
     if (size.width < 960) {
       return (
@@ -22,7 +24,7 @@ export default function Article({ data, path }) {
                 <div className={clss['article-layout-authorBorder']}>
                   <div className={cls['stack-item']}>
                     <span className={cls['avatar']}>
-                      <img className={cls['image']} src='https://vercel.com/api/www/avatar?u=drcmda&s=72' alt='' />
+                      <img className={cls['image']} src='/marchitecht.jpg' alt='' />
                     </span>
                     <div className={cls['stack-stack']}>
                       <a>
@@ -71,10 +73,7 @@ export default function Article({ data, path }) {
               </span>
             </h1>
             <p className={cls['article-layout_subtitle']}>
-              <span className={cls['subtitle']}>
-                {tLocal('subtitle')}
-
-              </span>
+              <span className={cls['subtitle']}>{tLocal('subtitle')}</span>
             </p>
           </div>
         </div>
@@ -86,19 +85,35 @@ export default function Article({ data, path }) {
             {/* ARTICLE */}
             <div className={cls['article-layout_articleWrapper']}>
               <div className={cls['post']}>
-                <p className={cls['post-content']}>{tLocal('postContent1')}</p>
-                <p className={cls['post-content']}>{tLocal('postContent2')}</p>
-                <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
-                <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
-                <p className={cls['post-content']}>{tLocal('postContent3')}</p>
-                <p className={cls['post-content']}>{tLocal('postContent4')}</p>
-                <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
-                <p className={cls['post-content']}>{tLocal('postContent5')}</p>
-                <p className={cls['post-content']}>{tLocal('postContent6')}</p>
-
-
-
-
+                {path === 'dp' && (
+                  <div className='p-2 mb-4'>
+                    <p className={cls['post-content']}>{tLocal('postContent1')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent2')}</p>
+                    <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent3')}</p>
+                    <img
+                      className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
+                      src='https://media.giphy.com/media/Bs7lKLBKz7po6uMxUj/giphy.gif'
+                      alt=''
+                    />
+                    <p className={cls['post-content']}>{tLocal('postContent4')}</p>
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent5')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent6')}</p>
+                    <SyntaxHighlighter language='javascript' style={nightOwl}>
+                      {data.codestring1}
+                    </SyntaxHighlighter>
+                    <p className={cls['post-content']}>{tLocal('postContent7')}</p>
+                    <SyntaxHighlighter language='javascript' style={nightOwl}>
+                      {data.codestring2}
+                    </SyntaxHighlighter>
+                    <p className={cls['post-content']}>{tLocal('postContent8')}</p>
+                    <SyntaxHighlighter language='javascript' style={nightOwl}>
+                      {data.codestring3}
+                    </SyntaxHighlighter>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -109,7 +124,7 @@ export default function Article({ data, path }) {
                   <p className={cls['text_wrapper']}>{t('posted')}</p>
                   <div className={cls['stack-item']}>
                     <span className={cls['avatar']}>
-                      <img className={cls['image']} src='https://vercel.com/api/www/avatar?u=drcmda&s=72' alt='' />
+                      <img className={cls['image']} src='/marchitecht.jpg' alt='' />
                     </span>
                     <div className={cls['stack-stack']}>
                       <a>
@@ -128,16 +143,35 @@ export default function Article({ data, path }) {
         <section className={clss['article-layout_article']}>
           <div className={clss['article-layout_articleWrapper']}>
             <div className={clss['post']}>
-              <p className={clss['post-content']}>{tLocal('postContent1')}</p>
-              <p className={clss['post-content']}>{tLocal('postContent2')}</p>
-              <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
-              <h2 className={clss['paragraph-header']}>{tLocal('heading2')}</h2>
-                <p className={clss['post-content']}>{tLocal('postContent3')}</p> 
-                <p className={clss['post-content']}>{tLocal('postContent4')}</p>
-                <h2 className={clss['paragraph-header']}>{tLocal('heading3')}</h2>
-                <p className={clss['post-content']}>{tLocal('postContent5')}</p>  
-                <p className={clss['post-content']}>{tLocal('postContent6')}</p>          
-        
+              {path === 'dp' && (
+                <div className='p-2 mb-8'>
+                  <p className={cls['post-content']}>{tLocal('postContent1')}</p>
+                  <p className={cls['post-content']}>{tLocal('postContent2')}</p>
+                  <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
+                  <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
+                  <p className={cls['post-content']}>{tLocal('postContent3')}</p>
+                  <p className={cls['post-content']}>{tLocal('postContent4')}</p>
+                  <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
+                  <p className={cls['post-content']}>{tLocal('postContent5')}</p>
+                  <p className={cls['post-content']}>{tLocal('postContent6')}</p>
+                  <SyntaxHighlighter language='javascript' style={nightOwl}>
+                    {data.codestring1}
+                  </SyntaxHighlighter>
+                  <p className={cls['post-content']}>{tLocal('postContent7')}</p>
+                  <SyntaxHighlighter language='javascript' style={nightOwl}>
+                    {data.codestring2}
+                  </SyntaxHighlighter>
+                  <p className={cls['post-content']}>{tLocal('postContent8')}</p>
+                  <SyntaxHighlighter language='javascript' style={nightOwl}>
+                    {data.codestring3}
+                  </SyntaxHighlighter>
+                  <video
+                    className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700'
+                    src='https://media.giphy.com/media/Bs7lKLBKz7po6uMxUj/giphy.gif'
+                    alt=''
+                  />
+                </div>
+              )}
             </div>
           </div>
         </section>

@@ -1,7 +1,7 @@
 {
   "Index": {
-    "heading": "Building products and software expirience.",
-    "paragraph": "I build products and software expirience. My passion is building products and software expirience.",
+    "heading": "Experienced Frontend Developer",
+    "paragraph": "Welcome to my personal blog, where I share my exciting journey as a frontend developer! Join me as I showcase fascinating projects that highlight my expertise in crafting captivating user interfaces and interactive web experiences. ",
     "contact": "Contact me",
     "title": "Digital passport",
     "description": "Building up from scratch User Interface for construction and engineering company"
@@ -14,14 +14,14 @@
   },
   "About": {
     "back": "← Back to Blog",
-    "badge": "CV and skills",
+    "badge": "Download CV",
     "date": "Friday October 21st 2022",
     "title": "About me",
-    "subtitle": "Hello! I’m Marat, a software developer. I’m passionate developer and I work on technologies that empower regular people to explore web. And I have a lovely cat. 😺"
-
+    "subtitle": "Hello! I’m Marat, a software developer. I’m passionate developer and I work on technologies that empower regular people to explore web. And I have a lovely cat. 😺",
+    "heading": "Technologies",
+    "techs": "Project management"
   },
   "Article": {
-    "title": "",
     "name": "Marat Musin",
     "occupation": "Software Engineer",
     "posted": "Posted by:",
