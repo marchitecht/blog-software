@@ -23,7 +23,7 @@ export default function LocaleSwitcher() {
     <label className={clsx('relative text-gray-400  w-10 h-10  rounded-full ring-2 ring-green-600 ', isPending && 'transition-opacity [&:disabled]:opacity-30')}>
       <p className='sr-only'>{t('locale')}</p>
       <select
-        className='inline-flex appearance-none bg-transparent py-1 pl-2 pr-2'
+        className='inline-flex appearance-none bg-transparent py-2 pl-3 pr-2'
         defaultValue={locale}
         disabled={isPending}
         onChange={onSelectChange}
