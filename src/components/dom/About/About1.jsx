@@ -29,11 +29,11 @@ export default function About1() {
                 {t('date')}
               </p>
             </div>
-            <h1 className={cls['article-layout_title']}>
+            <h2 className={cls['article-layout_title']}>
               <span className={cls['title']} style={{ display: 'inline-block', verticalAlign: 'top' }}>
                 {t('title')}
               </span>
-            </h1>
+            </h2>
             <p className={cls['article-layout_subtitle']}>
               <span className={cls['subtitle']}>{t('subtitle')}</span>
             </p>

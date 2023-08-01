@@ -4,6 +4,7 @@ import Navbar1 from '@/components/dom/Navbar/Navbar1'
 import '@/global.css'
 import { createTranslator, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
+import Head from './head'
 
 // export function generateStaticParams() {
 //   return [{ locale: 'en' }, { locale: 'ru' }]
@@ -39,7 +40,6 @@ export async function generateMetadata({ params: { locale } }) {
     contact: t('Index.contact'),
     title: t('Index.title'),
     description: t('Index.description'),
-    
   }
 }
 
@@ -56,10 +56,11 @@ export default async function LocaleLayout({ children, params: { locale } }) {
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
+      <Head />
+      {/* <head /> */}
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar/>
+          <Navbar />
           <Layout>{children}</Layout>
         </NextIntlClientProvider>
         {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
