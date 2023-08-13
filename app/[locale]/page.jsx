@@ -42,9 +42,10 @@ export default function Page() {
           <p className='flex-1 text-white  mt-14'>{t('paragraph')}</p>
           <div className=' flex flex-row mt-28 gap-4 lg:flex-row justify-self-end '>
             <button className='relative inline-flex group bg-green-400 px-4 py-2 rounded-3xl text-black  w-30 lg:w-auto'>
-              <div className='absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-green-800 to-[#44BCFF] rounded-md blur-md group-hover:opacity-100 group-hover:inset-1 group-hover:duration-200 animate-tilt'></div>
-
-              <a href='https://t.me/marchitecht'>{t('contact')}</a>
+              <a href='https://t.me/marchitecht'>
+                {t('contact')}
+                <div className='absolute transitiona-all duration-2000 opacity-50 -inset-px bg-gradient-to-r from-green-800 to-[#44BCFF] rounded-md blur-md group-hover:opacity-100 group-hover:inset-1 group-hover:duration-500 animate-tilt'></div>
+              </a>
             </button>
             <div className='flex items-center gap-4'>
               {/* <SocialButton bgColor='twitter'>
