@@ -36,10 +36,10 @@ export async function generateMetadata({ params: { locale } }) {
 
   return {
     heading: t('Index.heading'),
-    paragraph: t('Index.paragraph'),
-    contact: t('Index.contact'),
-    title: t('Index.title'),
-    description: t('Index.description'),
+    // paragraph: t('Index.paragraph'),
+    // contact: t('Index.contact'),
+    // title: t('Index.title'),
+    // description: t('Index.description'),
   }
 }
 
@@ -51,8 +51,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
     notFound()
   }
   return (
-    <html lang={locale} className='antialiased'>
-      
+    <html lang={locale} suppressHydrationWarning={true}>
       <head />
       {/* will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head */}

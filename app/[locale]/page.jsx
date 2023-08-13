@@ -40,21 +40,23 @@ export default function Page() {
         <div className="h-full rounded-3xl p-10 flex-col gap-16 bg-[url('/svg/gradient-bg.svg')] bg-cover ">
           <h1 className='text-4xl font-bold text-white'>{t('heading')}</h1>
           <p className='flex-1 text-white  mt-14'>{t('paragraph')}</p>
-          <div className='flex flex-row mt-28 gap-4 lg:flex-row justify-self-end '>
-            <button className='bg-green-500 px-4 py-2 rounded-3xl text-black  w-30 lg:w-auto'>
-              <a href='mailto:martin.musinn@gmail.com'>{t('contact')}</a>
+          <div className=' flex flex-row mt-28 gap-4 lg:flex-row justify-self-end '>
+            <button className='relative inline-flex group bg-green-400 px-4 py-2 rounded-3xl text-black  w-30 lg:w-auto'>
+              <div className='absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-green-800 to-[#44BCFF] rounded-md blur-md group-hover:opacity-100 group-hover:inset-1 group-hover:duration-200 animate-tilt'></div>
+
+              <a href='https://t.me/marchitecht'>{t('contact')}</a>
             </button>
-            {/* <div className='flex items-center gap-4'>
-              <SocialButton bgColor='twitter'>
+            <div className='flex items-center gap-4'>
+              {/* <SocialButton bgColor='twitter'>
                 <Twitter />
-              </SocialButton>
+              </SocialButton> */}
               <SocialButton bgColor='linkedin'>
                 <Linkedin />
               </SocialButton>
-              <SocialButton bgColor='instagram'>
+              {/* <SocialButton bgColor='instagram'>
                 <Instagram />
-              </SocialButton>
-            </div> */}
+              </SocialButton> */}
+            </div>
           </div>
         </div>
 

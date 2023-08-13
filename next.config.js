@@ -20,8 +20,6 @@ const nextConfig = {
   experimental: {
     reactRoot: 'concurrent',
     appDir: true,
-    nextScriptWorkers: true,
-
   },
   images: {
     // remotePatterns: [
