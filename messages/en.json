@@ -3,8 +3,10 @@
     "heading": "Experienced Frontend Developer",
     "paragraph": "Welcome to my personal blog, where I share my exciting journey as a frontend developer! Join me as I showcase fascinating projects that highlight my expertise in crafting captivating user interfaces and interactive web experiences. ",
     "contact": "Contact me",
-    "title": "Digital passport",
-    "description": "Building up from scratch User Interface for construction and engineering company"
+    "dpititle": "Digital passport",
+    "dp-description": "Building up from scratch User Interface for construction and engineering company",
+    "event-loop-title": "Event Loop Explained in 7 minutes",
+    "event-loop-description": "How event loop works in browser"
   },
   "Navigation": {
     "About": "ABOUT"
@@ -42,5 +44,45 @@
     "postContent6": "One of the key features of this application is displaying the operation of load cells on the 3D model. If a load cell is in a normal state, it is highlighted in green, but if there are issues, it is highlighted in red.",
     "postContent7": "Afterward, a new task emerged: to make the model and specific load cells visually accessible to the client. Instead of complicating things and using libraries like Theatre.js, I decided to write everything in useEffect, and it worked :)",
     "postContent8": "First, I check which device my client is using. Here is the current state:"
+  },
+  "event-loop": {
+    "title": "Event Loop Explained",
+    "date": "Friday August 11th 2023",
+    "badge": "JavaScript",
+    "subtitle": "Let's talk about Event loop and its fundametals.",
+    "postContent1": "It is essential to understand that the event loop is not part of JS itself. This is why V8 used in Chrome, and the same applies to Node.js. However the event loop in the browser and in Node.js are completely different concepts and are implementated differently. The event loop is a separate mechanism that enables us of a Non-blocking I/O model. Let's see it.",
+    "postContent2": "Imagine we don't have event loop, and there's no asynchronous code. In this case, we would execute JS code line by line, step by step. But now, the question: How can we make the execution of this code parallel? For example, we might want to send request, input something in an input field, and have animation running on the page simultaneously. We don't want the code to get blocked, and we don't want to wait for the response. We can use event loop to solve this problem.",
+    "heading2": "Delegating tasks",
+    "postContent3": "The task is to make the execution concurrent so that actions on the page don't block the operation of other components on the page. To achieve ths, we need the event loop and asynchronous code handling. By using asynchronous operations like callbacks, promises, or async/await, we can delegate tasks to the event loop. When asynchronous task, such as HTTP request, is in progress, other code execution can continue without waiting for the result of that request.",
+    "postContent4": "When the result is ready, a callback is triggered, or a promise is resolved, allowing the code to proceed with the appropriate response handling. This way  we can achieve parallelism and responsiveness in out JS programs, making them efficient and capable of handling multiple tasks simultaneously without getting blocked by long-running operations.",
+    "heading3": "Call Stack , Recursion, Stack overflow",
+    "postContent5": "Let's start with how async code works using the event loop step by step. There is  Call stack responsible for its processing. The JS engine - V8 - manages the call stack is data structure that can be visualized as a stack of books. When we want to take a book, we take the top book from the stack. And when we want to add a book, we place it on top of the stack. The call stack works similarly, stacking functions in the order they should be called. Let's start by looking at the simplest example.",
+    "postContent6": "Let's consider a more complex scenario. Here, functions are nested each other. We execute the third function, inside of which the second function is called, and inside the second function, the first function is called. When all functions are pushed into the stock , the first function, being the topmost on the stack is executeed first, followd by the second, and finally the third. This is how the stack operates.",
+    "postContent7": "Let's consider a more complex case using the example of factorial function. In this function, there is a base case to exit the recursive loop. So, inititally, the call stack recieves calls to this funciton with  a value: 5, then 4 ans so on until 1. The function will exit the Call Stack one by one from 1 to 5.",
+    "postContent8": "There is one important point to note. The call stack is not infinite. That means under certain conditions, it can be overwhelmed, and the application will crash.",
+    "postContent9": "If we call factorial function  with a very large number, the call stack will eventually overflow and the application will display an error. Thus, the call stack is limited by the number of function calls.",
+    "heading4": "Task queue, Async code",
+    "postContent10": "What if we want to perform some action after a delay of 3 seconds? For example, showing the user a message about a discount opportunity. Let's take a look at a code example:",
+    "postContent11": "In this example , the first function is executed first. Then, the 'setTimeout' is added to the call stack, but the callback function that we passed inside it is not executed immediately. This callback doesn't go to the call stack. Instead, it goes into the task queue. In out case, it is anonymous arrow function that we passed. This callback is placed in the Task queue. We can say it has been memorized and registered. We'll talk about how registration happens a bit later.",
+    "postContent12": "Then, log('end') is executed, and after 3 seconds have passed, the arrow function is executed, and inside it , the message is displayed.",
+    "heading5": "An important point!",
+    "postContent13": "Tasks from the task queue are executed only after all funcitons in the call stack have been called, i.e. when the call stack is completely empty.",
+    "heading6": "Tasks of JS engine: heap, call stack",
+    "postContent14": "So how do tasks get into the queue? As we have already established , the event loop is responsible for handling the task queue, while the JS engine, such as V8, Spider Monkey, etc, manages the call stack. So we need to understand which tasks are handled by the JS engine and which ones are managed by the event loop.",
+    "postContent15": "The JS engine handles the following tasks:",
+    "postContent16": "1. Working with the heap and callstack.",
+    "postContent17": "2. Managing memory, including memory allocation and garbage collection.",
+    "postContent18": "3. And the primary task to compile code into machine code.",
+    "postContent19": "Thus, the event loop is not part of the JS engine like V8. The event loop is provided by the environment of the browser, or Node.js. The structure of the event loop depends on the specific environment in which it is used. In Chrome and Node.js the engine is V8. However, their event loop implementations may differ.",
+    "postContent20": "Now let's address the question of how JS engine and event loop communicate with each other. The communication between JS engine and event loop occurs through the followoing steps:",
+    "postContent21": "Every Browser has an Web API. This API provides functionalities such as timeouts, event listeners, image and file loading and the ability to send fetch requests. These functionalities are part of the browser specification, not the JS engine. Let's consider the same example with Web API.",
+    "postContent22": "After the callstack is clear, the event loop takes the callback from the Task queue and puts it into the Call Stack for execution. Therefore, the execution flow is as folows:",
+    "postContent23": "First, all synchronous functions are executed on the call stack. Then setTimeout is registered. Once the times expires, the corresponding callback is placed in the Task Queue. Now, let's consider a similar example but with Event listeners. Similarly, addEventListener goes into Call stack. After that, the Web API registers an  event listener for the button. The same process happens with the second button etc. During this process, out interface remaains unblocked. When we click on these buttons, tasks are generated in the task queue. Once all synchronous functions are executed, the event loop takes the callback from the Task queue and puts it into the Call Stack for execution. In other words, thanks to asynchronous model, we can have thousands of event listeners for buttons, inputs, dropdowns and other elements in our application simultaneously. These events will be registered in the Web API until we explicitly remove them using removeEventListener. The asynchronous model allows us to handle events without blocking the main thread, ensuring smooth user interactions.",
+    "heading7": "Promises, microtasks, macrotasks",
+    "postContent24": "Let's imagine that our code introduces a new promise. For example, we use a browser fetch to retrieve data from database, and it operates using promises. Here's an example setTimeout is called with a delay of 0 ms. Now, the question arises: which will run faster, the promise or the setTimeout? When I mentioned the task queue earlier, I didn't cover the fact that there are actually two queues: the microtask queue and macrotask queue.",
+    "postContent25": "These queues have specific priorities, and the event loop handles tasks in a  certain order. Currently, we see the Web API has registered setTimeout and the promise is the call stack. Here comes the crucial point: promises always go to the microtask queue. At some point, when the zero ms timeout is reached, it moves the callback inside the timeout to macrotask queue.",
+    "postContent26": "Now, the question is, what will be executed faster? The timeout or promise?",
+    "postContent27": "The promise will be executed faster, and this is due to specific behaviour of the event loop, which priorities the microtask queue over the macrotask queue. First, all microtasks are executed, and then a single macrotask is executed.",
+    "postContent28": "Now, let's consider an example where we have multiple microtasks and multiple macrotasks. How will the event loop handle these tasks? The event loop will sequentially execute all the microtasks. When the microtask queue becomes empty , it will then take one task from the macrotask queue. Importantly, only one task from the macrotask queue is executed at a time."
   }
 }

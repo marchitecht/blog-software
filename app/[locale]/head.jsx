@@ -1,3 +1,4 @@
+
 const title = 'Frontend Engineer'
 const url = 'https://marchitecht.com/'
 const description = 'React and Next.js discovery'
@@ -43,12 +44,12 @@ export default function Head() {
       <link rel='apple-touch-startup-image' href='/startup.png' />
 
       {/* Meta Tags for HTML pages on Mobile */}
-      <meta name="format-detection" content="telephone=yes"/>
-        <meta name="HandheldFriendly" content="true"/> 
+      <meta name='format-detection' content='telephone=yes' />
+      <meta name='HandheldFriendly' content='true' />
       <meta name='viewport' content='width=device-width, minimum-scale=1, initial-scale=1.0' />
       <meta name='theme-color' content='#000' />
       <link rel='shortcut icon' href='/icons/apple-touch-icon.png' />
-
+      
       {/* 
       Twitter Summary card
         documentation: https://dev.twitter.com/cards/getting-started

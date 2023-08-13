@@ -52,12 +52,12 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   }
   return (
     <html lang={locale} className='antialiased'>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+      
+      <head />
+      {/* will contain the components returned by the nearest parent
+        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head */}
       <Head />
-      {/* <head /> */}
+      <head />
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />

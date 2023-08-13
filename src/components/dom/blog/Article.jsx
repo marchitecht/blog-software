@@ -4,10 +4,12 @@ import cls from './Article.module.scss'
 import clss from './Mobile.module.scss'
 import useWindowSize from '@/utils/hooks/use-windows-size'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Article({ data, path }) {
+
   const t = useTranslations('Article')
 
   const tLocal = useTranslations(path)
@@ -57,11 +59,11 @@ export default function Article({ data, path }) {
           </div>
           <div className={cls['article-layout_titleWrapper']}>
             <div className={cls['article-layout_categoryWrapper']}>
-              <a className={cls['link_link']} href='/blog/category/engineering'>
+              {/* <a className={cls['link_link']} href='/blog/category/engineering'> */}
                 <div className={`${cls['article-layout_pill']} ${cls['article-layout_pillGradientBackground']}`}>
                   <p className={cls['text_wrapper']}> {tLocal('badge')}</p>
                 </div>
-              </a>
+              {/* </a> */}
               <p className={cls['text_wrapper']} style={{ color: '#a1a1a1' }}>
                 {/* Friday October 21st 2022 */}
                 {tLocal('date')}
@@ -115,6 +117,93 @@ export default function Article({ data, path }) {
                     <SyntaxHighlighter language='javascript' style={nightOwl}>
                       {data.codestring3}
                     </SyntaxHighlighter>
+                  </div>
+                )}
+                {path === 'event-loop' && (
+                  <div className='p-2 mb-4'>
+                    <p className={cls['post-content']}>{tLocal('postContent1')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent2')}</p>
+                    <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent3')}</p>
+
+                    <p className={cls['post-content']}>{tLocal('postContent4')}</p>
+
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent5')}</p>
+                    <img
+                      className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
+                      src='https://ucarecdn.com/05b23af1-c859-49a4-9936-406eb04f8c43/'
+                      alt=''
+                      width={30}
+                      height={30}
+                    />
+                    <p className={cls['post-content']}>{tLocal('postContent6')}</p>
+                    <SyntaxHighlighter language='javascript' style={nightOwl}>
+                      {data.codestring1}
+                    </SyntaxHighlighter>
+                    <p className={cls['post-content']}>{tLocal('postContent7')}</p>
+                    <SyntaxHighlighter language='javascript' style={nightOwl}>
+                      {data.codestring2}
+                    </SyntaxHighlighter>
+                    <img
+                      className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
+                      src='https://ucarecdn.com/20ef0d7e-6cb6-4694-90f8-2be3fb9ce4fd/'
+                      alt=''
+                      width={30}
+                      height={30}
+                    />
+                    <p className={cls['post-content']}>{tLocal('postContent8')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent9')}</p>
+                    <img
+                      className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
+                      src='https://ucarecdn.com/e1eeb336-aad8-42b0-aed3-209916266ef2/'
+                      alt=''
+                      width={30}
+                      height={30}
+                    />
+
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading4')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent10')}</p>
+                    <SyntaxHighlighter language='javascript' style={nightOwl}>
+                      {data.codestring3}
+                    </SyntaxHighlighter>
+                    <p className={cls['post-content']}>{tLocal('postContent11')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent12')}</p>
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading5')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent13')}</p>
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading6')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent14')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent15')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent16')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent17')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent18')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent19')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent20')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent21')}</p>
+                    <img
+                      className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
+                      src='https://ucarecdn.com/58b17d67-ec44-476a-82ef-31d0e87d4985/'
+                      alt=''
+                      width={30}
+                      height={30}
+                    />
+                    <p className={cls['post-content']}>{tLocal('postContent22')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent23')}</p>
+                    <h2 className={cls['paragraph-header']}>{tLocal('heading7')}</h2>
+                    <p className={cls['post-content']}>{tLocal('postContent24')}</p>
+                    <img
+                      className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
+                      src='https://ucarecdn.com/21f3fb0f-a09a-4fc2-bbf2-bbb8757a98c2/'
+                      alt=''
+                      width={30}
+                      height={30}
+                    />
+                    <p className={cls['post-content']}>{tLocal('postContent25')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent26')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent27')}</p>
+                    <p className={cls['post-content']}>{tLocal('postContent28')}</p>
+
                   </div>
                 )}
               </div>
@@ -173,7 +262,35 @@ export default function Article({ data, path }) {
                   <SyntaxHighlighter language='javascript' style={nightOwl}>
                     {data.codestring3}
                   </SyntaxHighlighter>
-                 
+                </div>
+              )}
+              {path === 'event-loop' && (
+                <div className='p-2 mb-4'>
+                  <p className={cls['post-content']}>{tLocal('postContent1')}</p>
+                  <p className={cls['post-content']}>{tLocal('postContent2')}</p>
+                  <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
+                  <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
+                  <p className={cls['post-content']}>{tLocal('postContent3')}</p>
+                  <img
+                    className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
+                    src='https://ucarecdn.com/05b23af1-c859-49a4-9936-406eb04f8c43/'
+                    alt=''
+                  />
+                  <p className={cls['post-content']}>{tLocal('postContent4')}</p>
+                  <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
+                  <p className={cls['post-content']}>{tLocal('postContent5')}</p>
+                  <p className={cls['post-content']}>{tLocal('postContent6')}</p>
+                  <SyntaxHighlighter language='javascript' style={nightOwl}>
+                    {data.codestring1}
+                  </SyntaxHighlighter>
+                  <p className={cls['post-content']}>{tLocal('postContent7')}</p>
+                  <SyntaxHighlighter language='javascript' style={nightOwl}>
+                    {data.codestring2}
+                  </SyntaxHighlighter>
+                  <p className={cls['post-content']}>{tLocal('postContent8')}</p>
+                  <SyntaxHighlighter language='javascript' style={nightOwl}>
+                    {data.codestring3}
+                  </SyntaxHighlighter>
                 </div>
               )}
             </div>

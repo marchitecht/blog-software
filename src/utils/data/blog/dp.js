@@ -5,15 +5,15 @@ export const dataBlog = {
     date: 'Friday October 21st 2022',
     badge: 'Engineering',
     imageUrl: '/svg/DpLogo.svg',
-    bgColor: 'bg-gradient-to-r from-green-900 from-10% via-black-900 via-indigo-900 via-80% pulse',
+    bgColor: 'bg-gradient-to-r from-gray-900 from-100%  via-20% ',
 
-    title: 'Building an interactive WebGL experience in Next.js',
-    subtitle: 'Bring your creativity to life with the web 3D graphic rendering API.',
-    postContent1:
-      ' WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
-    postContent2:
-      ' WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
-    paragraph: 'The big idea',
+    title: `dp`,
+    // subtitle: 'Bring your creativity to life with the web 3D graphic rendering API.',
+    // postContent1:
+    //   ' WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
+    // postContent2:
+    //   ' WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
+    // paragraph: 'The big idea',
     postContent3:
       'WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
     codestring1: `<mesh ref={sensor6Ref}
@@ -63,5 +63,54 @@ export const dataBlog = {
       const [isLandscape, setLandscape] = useState(
       useMediaQuery("(orientation : landscape)");
       `,
+  },
+  loop: {
+    id: 2,
+    path: 'event-loop',
+    date: 'Friday August 11th 2023',
+    badge: 'javascript',
+    imageUrl:
+      'https://ucarecdn.com/21f3fb0f-a09a-4fc2-bbf2-bbb8757a98c2/-/exposure/-451/-/filter/yedis/100/-/preview/600x400/',
+    bgColor: 'bg-gradient-to-r from-gray-900 from-100% via-black-900 via-indigo-900 via-80% pulse',
+
+    title: 'event-loop',
+    subtitle: 'Bring your creativity to life with the web 3D graphic rendering API.',
+    postContent1:
+      ' WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
+    postContent2:
+      ' WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
+    paragraph: 'The big idea',
+    postContent3:
+      'WebGL is a JavaScript API for rendering 3D graphics within a web browser, giving developers the ability to create unique, delightful graphics, unlike anything a static image is capable of. By leveraging WebGL, we were able to take what would have been a static conference signup and turned it into',
+    codestring1: `function first() {
+      // code
+    }
+    
+function second() {
+      first();
+    }
+    
+function third() {
+      second();
+    }`,
+    codestring2: `
+function factorial(n) {
+   if (n < 2) {
+    return 1;
+    }
+  return n * factorial(n - 1);
+}`,
+    codestring3: `
+function log(value) {
+  console.log(value);
+}
+log("start");
+    
+setTimeout(() => {
+  log("Show discount message");
+}, 3000);
+    
+log("end");
+ `,
   },
 }

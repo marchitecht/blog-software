@@ -71,14 +71,16 @@ export default function Page() {
       <section className='grid grid-cols-1 lg:grid-cols-3 gap-3 max-w-[90%] mx-auto '>
         {/* first row */}
         {Object.values(dataBlog).map((item) => (
-          <ProjectPreview
-            name={t('title')}
-            description={t('description')}
-            imageUrl={item.imageUrl}
-            bgColor={item.bgColor}
-            key={item.id}
-            link={`/blog/${item.path}`}
-          />
+          <>
+            <ProjectPreview
+              name={item.title === 'dp' ? `${t('dp-title')}` : `${t('event-loop-title')}`}
+              description={item.title === 'dp' ? `${t('dp-description')}` : `${t('event-loop-description')}`}
+              imageUrl={item.imageUrl}
+              bgColor={item.bgColor}
+              key={item.id}
+              link={`/blog/${item.path}`}
+            />
+          </>
         ))}
       </section>
     </>

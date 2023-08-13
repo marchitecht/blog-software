@@ -4,6 +4,7 @@ const { dataBlog } = require('@/utils/data/blog/dp')
 
 export async function generateStaticParams() {
   const posts = Object.values(dataBlog)
+  // console.log(posts);
 
   return posts.map((post) => ({
     slug: post.path,
