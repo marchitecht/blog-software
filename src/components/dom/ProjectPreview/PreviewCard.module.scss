@@ -1,0 +1,86 @@
+.article {
+  --post-radius: 12px;
+  --post-padding: 6px;
+  --ds-gray-900: hsla(var(--ds-gray-900-value), 1);
+  --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, 0.145);
+  --ds-gray-100: hsla(var(--ds-gray-100-value), 1);
+  --post-inner-radius: calc(var(--post-radius) - var(--post-padding));
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: var(--post-padding);
+  border-radius: var(--post-radius);
+  box-shadow: var(--ds-shadow-border);
+  background: transparent;
+}
+.articleContent {
+  --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1);
+  --ds-gray-1000-value: 0, 0%, 93%;
+  color: var(--ds-gray-1000);
+  display: flex;
+  flex-direction: var(--stack-direction, column);
+  align-items: var(--stack-align, stretch);
+  justify-content: var(--stack-justify, flex-start);
+  flex: var(--stack-flex, initial);
+  gap: var(--stack-gap, 0);
+  padding: var(--stack-padding, 0);
+  --stack-flex: initial;
+  --stack-direction: column;
+  --stack-align: stretch;
+  --stack-justify: flex-start;
+  --stack-padding: 12px;
+  --stack-gap: 20px;
+}
+.blogTitle {
+  --ds-gray-900: hsla(var(--ds-gray-900-value), 1);
+  --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1);
+  --ds-gray-1000-value: 0, 0%, 93%;
+  --ds-gray-alpha-1000: hsla(0, 0%, 100%, 0.92);
+  text-decoration: inherit;
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--text-size);
+  letter-spacing: var(--text-letter-spacing, inherit);
+  font-weight: var(--text-weight);
+  line-height: var(--text-line-height);
+  text-transform: var(--text-transform, inherit);
+  text-align: var(--text-align, inherit);
+  border-radius: 2px;
+  width: fit-content;
+  --text-color: var(--ds-gray-1000);
+  --text-size: 1.7rem;
+  --text-line-height: 2rem;
+  --text-letter-spacing: -0.020625rem;
+  --text-weight: 500;
+}
+.preview {
+  max-width: 65ch;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.readMore {
+  --ds-gray-100: hsla(var(--ds-gray-100-value), 1);
+  --ds-gray-900: hsla(var(--ds-gray-900-value), 1);
+  --ds-gray-100-value: 0, 0%, 10%;
+  --ds-gray-900-value: 0, 0%, 63%;
+  transition: color 0.2s ease;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: inherit;
+  height: 36px;
+  background: var(--ds-gray-100);
+  color: var(--ds-gray-900);
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--post-inner-radius) var(--post-inner-radius);
+  margin-top: auto;
+  transition-property: background, color;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}

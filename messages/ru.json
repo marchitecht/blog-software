@@ -6,7 +6,8 @@
     "dp-title": "Digital passport",
     "dp-description": "Создание с нуля Проекта Digital passport",
     "event-loop-title": "Event Loop база",
-    "event-loop-description": "Разбираем event loop в браузере"
+    "event-loop-description": "Разбираем event loop в браузере",
+    "button": "Подробнее"
   },
   "Navigation": {
     "About": "РЕЗЮМЕ"

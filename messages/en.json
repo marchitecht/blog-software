@@ -6,7 +6,8 @@
     "dp-title": "Digital passport",
     "dp-description": "Building up from scratch User Interface for construction and engineering company",
     "event-loop-title": "Event Loop Explained in 7 minutes",
-    "event-loop-description": "How event loop works in browser"
+    "event-loop-description": "How event loop works in browser",
+    "button": "Read more"
   },
   "Navigation": {
     "About": "ABOUT"

@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic'
 import { Suspense, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { dataBlog } from '@/utils/data/blog/dp'
+import PreviewCard from '@/components/dom/ProjectPreview/PreviewCard'
 
 const Logo = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Logo), { ssr: false })
 // const Dog = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Dog), { ssr: false })
@@ -34,7 +35,7 @@ export default function Page() {
   const t = useTranslations('Index')
 
   return (
-    <>
+    <div className='h-[180vh]'>
       <section className='grid sm:grid-cols-1 lg:grid-cols-[2fr_1fr] gap-3 py-8 max-w-[90%] mx-auto '>
         {/* jumbo */}
         <div className="h-full rounded-3xl p-10 flex-col gap-16 bg-[url('/svg/gradient-bg.svg')] bg-cover ">
@@ -71,21 +72,28 @@ export default function Page() {
         </div>
       </section>
 
-      <section className='grid grid-cols-1 lg:grid-cols-3 gap-3 max-w-[90%] mx-auto '>
+      <section className='grid grid-cols-1 lg:grid-cols-3 gap-3 max-w-[90%] mx-auto'>
         {/* first row */}
         {Object.values(dataBlog).map((item) => (
           <>
-            <ProjectPreview
+            {/* <ProjectPreview
               name={item.title === 'dp' ? `${t('dp-title')}` : `${t('event-loop-title')}`}
               description={item.title === 'dp' ? `${t('dp-description')}` : `${t('event-loop-description')}`}
               imageUrl={item.imageUrl}
               bgColor={item.bgColor}
               key={item.id}
               link={`/blog/${item.path}`}
+            /> */}
+            <PreviewCard
+              name={item.title === 'dp' ? `${t('dp-title')}` : `${t('event-loop-title')}`}
+              description={item.title === 'dp' ? `${t('dp-description')}` : `${t('event-loop-description')}`}
+              link={`/blog/${item.path}`}
+              button={t('button')}
+              // imageUrl={item.imageUrl}
             />
           </>
         ))}
       </section>
-    </>
+    </div>
   )
 }
