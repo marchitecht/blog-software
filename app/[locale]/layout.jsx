@@ -5,6 +5,7 @@ import '@/global.css'
 import { createTranslator, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import Head from './head'
+import { Analytics } from '@vercel/analytics/react'
 
 // export function generateStaticParams() {
 //   return [{ locale: 'en' }, { locale: 'ru' }]
@@ -61,6 +62,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <Layout>{children}</Layout>
+          <Analytics />
         </NextIntlClientProvider>
         {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
       </body>
