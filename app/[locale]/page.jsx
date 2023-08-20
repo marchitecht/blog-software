@@ -128,8 +128,8 @@ export default function Page() {
 
         <section className='grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-[90%] mx-auto h-full'>
           {/* POSTs */}
-          {Object.values(dataBlog).map((item) => (
-            <div className='h-full'>
+          <div className='h-full'>
+            {Object.values(dataBlog).map((item) => (
               <PreviewCard
                 name={item.title === 'dp' ? `${t('dp-title')}` : `${t('event-loop-title')}`}
                 description={item.title === 'dp' ? `${t('dp-description')}` : `${t('event-loop-description')}`}
@@ -137,8 +137,8 @@ export default function Page() {
                 button={t('button')}
                 key={item.id}
               />
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
       </div>
     </>
