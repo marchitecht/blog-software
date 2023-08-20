@@ -40,7 +40,6 @@ export const Fragment = () => {
   // This reference will give us direct access to the mesh
   const mesh = useRef()
   const hover = useRef(false)
-
   const uniforms = useMemo(
     () => ({
       u_intensity: {
