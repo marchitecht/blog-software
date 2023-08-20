@@ -135,6 +135,7 @@ export default function Page() {
                 description={item.title === 'dp' ? `${t('dp-description')}` : `${t('event-loop-description')}`}
                 link={`/blog/${item.path}`}
                 button={t('button')}
+                key={item.id}
               />
             </div>
           ))}
