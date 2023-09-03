@@ -18,7 +18,7 @@ export default function About1() {
           </div>
           <div className={cls['article-layout_titleWrapper']}>
             <div className={cls['article-layout_categoryWrapper']}>
-              <a href='/CV_Marat.pdf' className={cls['link_link']}>
+              <a href='/CV.pdf' className={cls['link_link']}>
                 <div className={`${cls['article-layout_pill']} ${cls['article-layout_pillGradientBackground']}`}>
                   <div className={cls['text_wrapper']}> {t('badge')}</div>
 

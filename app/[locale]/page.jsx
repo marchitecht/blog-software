@@ -17,6 +17,8 @@ import fragmentShader from '@/templates/Shader/example/fragmentShader'
 import { Canvas, extend, useFrame } from '@react-three/fiber'
 import { Color, MathUtils, ShaderMaterial } from 'three'
 import { OrbitControls, shaderMaterial } from '@react-three/drei'
+import UploadcareImage from '@uploadcare/nextjs-loader';
+
 
 const Logo = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Logo), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
@@ -122,6 +124,9 @@ export default function Page() {
                 <Common />
               </Suspense>
             </View>
+          </div>
+          <div className=''>
+            <UploadcareImage src={'https://ucarecdn.com/7d5630f3-7ff3-4740-90de-879af0a34bf2/'} alt='tesseract' width={300} height={300} />
           </div>
         </section>
 

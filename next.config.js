@@ -22,14 +22,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    // remotePatterns: [
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'ucarecdn.com',
-    //     port: '',
-    //     pathname: '/blog/**',
-    //   },
-    // ],
+    loader: 'custom',
   },
   webpack(config, { isServer }) {
     if (!isServer) {

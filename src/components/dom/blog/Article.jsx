@@ -7,9 +7,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import UploadcareImage from '@uploadcare/nextjs-loader'
 
 export default function Article({ data, path }) {
-
   const t = useTranslations('Article')
 
   const tLocal = useTranslations(path)
@@ -26,7 +26,7 @@ export default function Article({ data, path }) {
                 <div className={clss['article-layout-authorBorder']}>
                   <div className={cls['stack-item']}>
                     <span className={cls['avatar']}>
-                      <img className={cls['image']} src='/marchitecht.jpg' alt='' />
+                      <UploadcareImage width={80} height={80} className={cls['image']} src='/marchitecht.jpg' alt='' />
                     </span>
                     <div className={cls['stack-stack']}>
                       <a>
@@ -60,9 +60,9 @@ export default function Article({ data, path }) {
           <div className={cls['article-layout_titleWrapper']}>
             <div className={cls['article-layout_categoryWrapper']}>
               {/* <a className={cls['link_link']} href='/blog/category/engineering'> */}
-                <div className={`${cls['article-layout_pill']} ${cls['article-layout_pillGradientBackground']}`}>
-                  <p className={cls['text_wrapper']}> {tLocal('badge')}</p>
-                </div>
+              <div className={`${cls['article-layout_pill']} ${cls['article-layout_pillGradientBackground']}`}>
+                <p className={cls['text_wrapper']}> {tLocal('badge')}</p>
+              </div>
               {/* </a> */}
               <p className={cls['text_wrapper']} style={{ color: '#a1a1a1' }}>
                 {/* Friday October 21st 2022 */}
@@ -101,6 +101,8 @@ export default function Article({ data, path }) {
                       loop
                       autoPlay
                       muted
+                      width={80}
+                      height={80}
                     />
                     <p className={cls['post-content']}>{tLocal('postContent4')}</p>
                     <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
@@ -131,7 +133,9 @@ export default function Article({ data, path }) {
 
                     <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
                     <p className={cls['post-content']}>{tLocal('postContent5')}</p>
-                    <img
+                    <UploadcareImage
+                      width={80}
+                      height={80}
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/05b23af1-c859-49a4-9936-406eb04f8c43/'
                       alt=''
@@ -146,7 +150,7 @@ export default function Article({ data, path }) {
                     <SyntaxHighlighter language='javascript' style={nightOwl}>
                       {data.codestring2}
                     </SyntaxHighlighter>
-                    <img
+                    <UploadcareImage
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/20ef0d7e-6cb6-4694-90f8-2be3fb9ce4fd/'
                       alt=''
@@ -181,7 +185,7 @@ export default function Article({ data, path }) {
                     <p className={cls['post-content']}>{tLocal('postContent19')}</p>
                     <p className={cls['post-content']}>{tLocal('postContent20')}</p>
                     <p className={cls['post-content']}>{tLocal('postContent21')}</p>
-                    <img
+                    <UploadcareImage
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/58b17d67-ec44-476a-82ef-31d0e87d4985/'
                       alt=''
@@ -192,7 +196,7 @@ export default function Article({ data, path }) {
                     <p className={cls['post-content']}>{tLocal('postContent23')}</p>
                     <h2 className={cls['paragraph-header']}>{tLocal('heading7')}</h2>
                     <p className={cls['post-content']}>{tLocal('postContent24')}</p>
-                    <img
+                    <UploadcareImage
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/21f3fb0f-a09a-4fc2-bbf2-bbb8757a98c2/'
                       alt=''
@@ -203,7 +207,6 @@ export default function Article({ data, path }) {
                     <p className={cls['post-content']}>{tLocal('postContent26')}</p>
                     <p className={cls['post-content']}>{tLocal('postContent27')}</p>
                     <p className={cls['post-content']}>{tLocal('postContent28')}</p>
-
                   </div>
                 )}
               </div>
@@ -216,7 +219,7 @@ export default function Article({ data, path }) {
                   <p className={cls['text_wrapper']}>{t('posted')}</p>
                   <div className={cls['stack-item']}>
                     <span className={cls['avatar']}>
-                      <img className={cls['image']} src='/marchitecht.jpg' alt='' />
+                      <UploadcareImage className={cls['image']} src='/marchitecht.jpg' alt='' width={80} height={80} />
                     </span>
                     <div className={cls['stack-stack']}>
                       <a>
@@ -241,10 +244,12 @@ export default function Article({ data, path }) {
                   <p className={cls['post-content']}>{tLocal('postContent2')}</p>
                   <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
                   <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
-                  <video
+                  <UploadcareImage
                     className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-4 mb-4'
                     src='https://media.giphy.com/media/Bs7lKLBKz7po6uMxUj/giphy.gif'
                     alt=''
+                    width={80}
+                    height={80}
                   />
                   <p className={cls['post-content']}>{tLocal('postContent3')}</p>
                   <p className={cls['post-content']}>{tLocal('postContent4')}</p>
@@ -271,7 +276,9 @@ export default function Article({ data, path }) {
                   <hr style={{ borderTop: '1px solid gray', margin: '50px 0' }} />
                   <h2 className={cls['paragraph-header']}>{tLocal('heading2')}</h2>
                   <p className={cls['post-content']}>{tLocal('postContent3')}</p>
-                  <img
+                  <UploadcareImage
+                    width={80}
+                    height={80}
                     className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                     src='https://ucarecdn.com/05b23af1-c859-49a4-9936-406eb04f8c43/'
                     alt=''

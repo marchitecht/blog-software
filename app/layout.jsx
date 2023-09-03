@@ -6,11 +6,7 @@ import './global.css'
 export default function RootLayout({ children }) {
   return (
     <>
-     
-      <body>
-        {children}
-      
-      </body>
+      <body>{children}</body>
     </>
   )
 }
