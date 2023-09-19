@@ -134,8 +134,7 @@ export default function Article({ data, path }) {
                     <h2 className={cls['paragraph-header']}>{tLocal('heading3')}</h2>
                     <p className={cls['post-content']}>{tLocal('postContent5')}</p>
                     <UploadcareImage
-                      width={80}
-                      height={80}
+                    
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/05b23af1-c859-49a4-9936-406eb04f8c43/'
                       alt='img'
