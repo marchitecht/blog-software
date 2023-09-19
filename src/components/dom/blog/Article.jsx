@@ -138,7 +138,7 @@ export default function Article({ data, path }) {
                       height={80}
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/05b23af1-c859-49a4-9936-406eb04f8c43/'
-                      alt=''
+                      alt='img'
                       width={30}
                       height={30}
                     />
@@ -153,7 +153,7 @@ export default function Article({ data, path }) {
                     <UploadcareImage
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/20ef0d7e-6cb6-4694-90f8-2be3fb9ce4fd/'
-                      alt=''
+                      alt='img'
                       width={30}
                       height={30}
                     />
@@ -185,7 +185,7 @@ export default function Article({ data, path }) {
                     <p className={cls['post-content']}>{tLocal('postContent19')}</p>
                     <p className={cls['post-content']}>{tLocal('postContent20')}</p>
                     <p className={cls['post-content']}>{tLocal('postContent21')}</p>
-                    <UploadcareImage
+                    <img
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/58b17d67-ec44-476a-82ef-31d0e87d4985/'
                       alt=''
@@ -196,7 +196,7 @@ export default function Article({ data, path }) {
                     <p className={cls['post-content']}>{tLocal('postContent23')}</p>
                     <h2 className={cls['paragraph-header']}>{tLocal('heading7')}</h2>
                     <p className={cls['post-content']}>{tLocal('postContent24')}</p>
-                    <UploadcareImage
+                    <img
                       className='w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700 mt-8 '
                       src='https://ucarecdn.com/21f3fb0f-a09a-4fc2-bbf2-bbb8757a98c2/'
                       alt=''
