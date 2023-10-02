@@ -125,9 +125,7 @@ export default function Page() {
               </Suspense>
             </View>
           </div>
-          <div className=''>
-            <UploadcareImage src={'https://ucarecdn.com/7d5630f3-7ff3-4740-90de-879af0a34bf2/'} alt='tesseract' width={300} height={300} />
-          </div>
+         
         </section>
 
         <section className=' max-w-[90%] mx-auto h-full'>
